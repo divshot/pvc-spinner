@@ -1,0 +1,80 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="pvc-spinner" attributes="type color">
+  <template>
+    <link rel="stylesheet" href="pvc-spinner.css">
+    <template if="{{ type == 'rotating-plane' || type == 'pulse' }}">
+      <div class="spinner {{type}}"></div>
+    </template>
+    <template if="{{ type == 'double-bounce' }}">
+      <div class="spinner {{type}}">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </template>
+    <template if="{{ type == 'wave' }}">
+      <div class="spinner {{type}}">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+    </template>
+    <template if="{{ type == 'wandering-cubes' }}">
+      <div class="spinner {{type}}">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+      </div>
+    </template>
+    <template if="{{ type == 'chasing-dots' }}">
+      <div class="spinner {{type}}">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+      </div>
+    </template>
+    <template if="{{ type == 'three-bounce' }}">
+      <div class="spinner {{type}}">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
+    </template>
+    <template if="{{ type == 'circle' || type == 'fading-circle' }}">
+      <div class="spinner {{type}}">
+        <div class="circle1 circle"></div>
+        <div class="circle2 circle"></div>
+        <div class="circle3 circle"></div>
+        <div class="circle4 circle"></div>
+        <div class="circle5 circle"></div>
+        <div class="circle6 circle"></div>
+        <div class="circle7 circle"></div>
+        <div class="circle8 circle"></div>
+        <div class="circle9 circle"></div>
+        <div class="circle10 circle"></div>
+        <div class="circle11 circle"></div>
+        <div class="circle12 circle"></div>
+      </div>
+    </template>
+    <template if="{{ type == 'cube-grid' }}">
+      <div class="spinner {{type}}">
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
+    </template>
+  </template>
+  <script>
+    (function() {
+      Polymer('pvc-spinner', {
+        type: 'rotating-plane'
+      });
+    })();
+  </script>
+</polymer-element>

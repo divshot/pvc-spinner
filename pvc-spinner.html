@@ -1,5 +1,16 @@
 <link rel="import" href="../polymer/polymer.html">
 
+<!--
+
+Beautiful animated spinners from the excellent [SpinKit](https://github.com/tobiasahlin/SpinKit).
+
+##### Example
+
+    <pvc-spinner type="wave"></pvc-spinner>
+
+@element pvc-spinner
+@blurb Beautiful animated spinners from SpinKit.
+-->
 <polymer-element name="pvc-spinner" attributes="type">
   <template>
     <link rel="stylesheet" href="pvc-spinner.css">
@@ -73,6 +84,15 @@
   <script>
     (function() {
       Polymer('pvc-spinner', {
+        /**
+         * The spinner type. Can be any one of `rotating-plane`, `pulse`, `wave`,
+         * `wandering-cubes`, `chasing-dots`, `three-bounce`, `fading-circle`,
+         * `circle`, or `cube-grid`.
+         * 
+         * @attribute type
+         * @type string
+         * @default wandering-cube
+         */
         type: 'rotating-plane'
       });
     })();
